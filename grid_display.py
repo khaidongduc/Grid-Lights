@@ -1,20 +1,20 @@
-## A helper function that displays a grid of differently colored
-## cell. The grid should be represented as a list of lists. The
-## elements of the inner lists (i.e., the cells) are represented as
-## numbers between 0 and 10. Each number gets mapped to a specific
-## color.
+# A helper function that displays a grid of differently colored
+# cell. The grid should be represented as a list of lists. The
+# elements of the inner lists (i.e., the cells) are represented as
+# numbers between 0 and 10. Each number gets mapped to a specific
+# color.
 ##
-## The number to color mapping is as follows:
-##  0 -> white
-##  1 -> gold 
-##  2 -> orange
-##  3 -> red
-##  4 -> dark red
-##  5 -> medium violet red
-##  6 -> midnight blue
-##  7 -> sea green
-##  8 -> dark green
-##  9 -> black
+# The number to color mapping is as follows:
+# 0 -> white
+# 1 -> gold
+# 2 -> orange
+# 3 -> red
+# 4 -> dark red
+# 5 -> medium violet red
+# 6 -> midnight blue
+# 7 -> sea green
+# 8 -> dark green
+# 9 -> black
 ##
 
 import pygame
@@ -71,7 +71,8 @@ def run_display(grid, cell_size, on_click):
         y = margin
         for row in grid:
             for cell in row:
-                pygame.draw.rect(screen, decode_color(cell), (x, y, cell_size, cell_size))
+                pygame.draw.rect(screen, decode_color(
+                    cell), (x, y, cell_size, cell_size))
                 x += cell_size + margin
             y += cell_size + margin
             x = margin

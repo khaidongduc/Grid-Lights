@@ -11,12 +11,14 @@ OFF = 4
 SIZE = 5
 # The difference between the chosen block and neighbor block
 
+
 def run_lights():
     """
     Create the initial representation of the grid and start the
     display.
     """
-    grid = [[random.choice([ON, OFF]) for j in range(SIZE)] for i in range(SIZE)]
+    grid = [[random.choice([ON, OFF]) for j in range(SIZE)]
+            for i in range(SIZE)]
     # start display
     cell_size = 40
     run_display(grid, cell_size, on_click)
@@ -25,6 +27,7 @@ def run_lights():
 def toggle(grid, row, col):
     if ((0 <= row < SIZE) and (0 <= col < SIZE)):
         grid[row][col] = (ON + OFF) - grid[row][col]
+
 
 def on_click(grid, row, col):
     """
